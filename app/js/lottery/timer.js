@@ -1,7 +1,7 @@
 class Timer {
     countdown(end, update, handle) {
         const now = new Date().getTime()
-        if (now - end) {
+        if (now - end > 0) {
             handle.call(this)
         } else {
             let last_time = end - now
